@@ -2,7 +2,7 @@ name: Daily Weather Notification
 
 on:
   schedule:
-    - cron: "*/1 * * * *"
+    - cron: "*/10 * * * *"
 
 jobs:
   send_weather_notification:
