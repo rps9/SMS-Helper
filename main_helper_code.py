@@ -7,6 +7,7 @@ import os
 # Get the weather for a given city
 def get_weather(city):
     weather_key = os.getenv("WEATHER_API_KEY")
+    print(weather_key)
     weather_url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={weather_key}"
 
     weather_response = requests.get(weather_url)
@@ -21,6 +22,10 @@ def send_message(message):
     sender_email = os.getenv('SENDER_EMAIL')
     sender_password = os.getenv('EMAIL_PASSWORD')
     recipient_email = os.getenv('RECIPIENT_EMAIL')
+
+    print(sender_email)
+    print(sender_password)
+    print(recipient_email)
 
     # Connect to the notification email
     server = smtplib.SMTP('smtp.gmail.com', 587)
@@ -49,6 +54,7 @@ def main():
 
     # Fetch weather data
     weather_data = get_weather('Boston')
+    print(weather_data)
     if not weather_data:
         return
 
