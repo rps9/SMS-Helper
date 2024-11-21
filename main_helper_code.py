@@ -41,7 +41,7 @@ def get_clothing_recommendation(feels_like_temp_F):
     if feels_like_temp_F < 32:
         return f"It will feel like {feels_like_temp_F}, so wear a heavy coat."
     elif 32 <= feels_like_temp_F < 50:
-        return f"It will feel like {feels_like_temp_F}, so wear long sleeves or a sweatshirt."
+        return f"It will feel like {feels_like_temp_F}, so wear a sweater."
     elif 50 <= feels_like_temp_F < 65:
         return f"It will feel like {feels_like_temp_F}, so wear a light jacket."
     elif 65 <= feels_like_temp_F < 80:

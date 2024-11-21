@@ -2,7 +2,7 @@ name: Daily Weather Notification
 
 on:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "37 17 * * *"  # 12:37 PM EST (17:37 UTC)
   workflow_dispatch:
 
 jobs:
